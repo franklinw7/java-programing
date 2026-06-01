@@ -1,0 +1,167 @@
+1.perfect number:
+
+    public class Main {
+    public static void main(String[] args) {
+        int num = 28;
+        int sum = 0;
+
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum == num) {
+            System.out.println("Perfect Number");
+        } else {
+            System.out.println("Not a Perfect Number");
+        }
+    }
+}
+
+2. power number:
+
+public class Main {
+    public static void main(String[] args) {
+        int base = 2;
+        int power = 3;
+        int result = 1;
+
+        for (int i = 1; i <= power; i++) {
+            result *= base;
+        }
+
+        System.out.println(result);
+    }
+}
+
+3.Automorphic Number:
+
+public class Main {
+    public static void main(String[] args) {
+        int num = 25;
+        int square = num * num;
+
+        if (square % 100 == num) {
+            System.out.println("Automorphic Number");
+        } else {
+            System.out.println("Not Automorphic Number");
+        }
+    }
+}
+
+
+4. happy number:
+
+public class Main {
+    public static void main(String[] args) {
+
+        int num = 19;
+
+        while (num != 1 && num != 4) {
+            int sum = 0;
+
+            while (num > 0) {
+                int digit = num % 10;
+                sum += digit * digit;
+                num /= 10;
+            }
+
+            num = sum;
+        }
+
+        if (num == 1)
+            System.out.println("Happy Number");
+        else
+            System.out.println("Not Happy Number");
+    }
+}
+
+5.prime number:
+
+public class Main {
+    public static void main(String[] args) {
+
+        int num = 7;
+        int count = 0;
+
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+
+        if (count == 2)
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime Number");
+    }
+}
+
+
+6.factorial:
+
+public class Main {
+    public static void main(String[] args) {
+
+        int num = 5;
+        int fact = 1;
+
+        for(int i = 1; i <= num; i++) {
+            fact = fact * i;
+        }
+
+        System.out.println(fact);
+    }
+}
+
+7.Palindrome
+
+public class Main {
+    public static void main(String[] args) {
+
+        int num = 121;
+        int original = num;
+        int reverse = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num /= 10;
+        }
+
+        if (original == reverse)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+
+8.strong number:
+
+public class Main {
+    public static void main(String[] args) {
+
+        int num = 145;
+        int temp = num;
+        int sum = 0;
+
+        while (temp > 0) {
+            int digit = temp % 10;
+
+            int fact = 1;
+            for (int i = 1; i <= digit; i++) {
+                fact *= i;
+            }
+
+            sum += fact;
+            temp /= 10;
+        }
+
+        if (sum == num)
+            System.out.println("Strong Number");
+        else
+            System.out.println("Not Strong Number");
+    }
+}
+
